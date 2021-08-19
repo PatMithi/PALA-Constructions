@@ -1,0 +1,31 @@
+%footer#footer.bg-darkblue.text-gold.px-4
+  .row.pt-4.m-0
+    .col-12.col-md-4.py-3.py-md-0.text-medium.logo-image-container.text-left.text-white.text-center
+      = image_tag '/images/logos/PALA Transp.png'
+      %p{:class => 'text-white text-small footer-left'} The official webiste of PALA Construction
+      = icon 'fas text-white p-2 pt-0 pb-2', 'copyright'
+      2021
+    
+    .col-12.col-md-4.py-3.py-md-0.bordery-gray.borderx-md-gray.text-center
+      .text-medium.text-white.pt-3
+        = link_to about_path, title: "Go to About Page" , class: "text-decoration-none text-white" do
+          %p About
+
+        = link_to contact_path, title: "Go to Contact Page", class: "text-decoration-none text-white" do
+          %p Contact
+        %p FAQs
+
+    .col-12.col-md-4.py-3.py-md-0.text-center
+      .row.justify-content-center.flex-column-reverse.flex-md-row.pt-5
+        .col-12.col-md-2
+          .socials-images-footer
+            =image_tag "/images/insta-footer.png"
+        .col-12.col-md-2
+          .socials-images-footer
+            =image_tag "/images/facebook-footer.png"
+        .col-12.col-md-2
+          .socials-images-footer
+            =image_tag "/images/whatsapp-footer.png"
+        .col-12.col-md-2
+          .socials-images-footer
+            =image_tag "/images/twitter-footer.png"

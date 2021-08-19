@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+body, .font-main {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.text-extra-small {
+  font-size: $font-extra-small;
+}
+
+.text-small {
+  font-size: $font-small;
+}
+
+.text-medium {
+  font-size: $font-medium;
+}
+
+.text-large {
+  font-size: $font-large;
+}
+
+.text-huge {
+  font-size: $font-huge;
+}
+
+.text-black {
+  color: $primary-font;
+}
+
+
+@media (max-width: 576px) {
+  .text-small {
+    font-size: $font-extra-small;
+  }
+
+  .text-medium {
+    font-size: $font-small;
+  }
+
+  .text-large {
+    font-size: $font-not-quite-large;
+  }
+
+  .text-huge {
+    font-size: $font-not-so-huge;
+  }
+}
+
+.text-darkgray {
+  color: $darkgray
+}
+
+.text-gray {
+  color: $gray
+}
+
+.text-white, .white-button, .white-button:hover  {
+  color: $secondary-font;
+}
+
+.text-blue, .button-blue, .button-blue:hover {
+  color: $blue;
+}
+
+.text-red, .delete-button, .delete-button:hover {
+  color: $primary-color;
+}
+
+.text-gold {
+  color: $gold;
+  z-index: 2;
+}
+
+.line-height-normal {
+  line-height: $line-height-base;
+}

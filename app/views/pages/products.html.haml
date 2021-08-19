@@ -1,0 +1,60 @@
+- content_for :title, 'Products'
+
+.row.justify-content-center.flex-column-reverse.flex-md-row.p-5  
+  .col-12.col-md-8.small-border
+    #slider.carousel.slide{"data-ride" => "carousel"}  
+      .carousel-inner
+        .carousel-item.active
+          .row.justify-content-center.flex-column-reverse.flex-md-row
+            .col-12.col-md-4
+              .product-image.p-2
+                =image_tag '/images/block1.jpg'
+            .col-12.col-md-8.pt-2.text-medium
+              %strong 50X30 Hollow Concrete Block
+              %p MWK 300
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+              Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,
+              tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+              Aenean velit odio, elementum in tempus ut, vehicula eu di
+
+              .row.justify-content-center.flex-column-reverse.flex-md-row.pt-5
+                .col-12.col-md-4
+                  .btn-gold.text-center.rounded.text-gold
+                    Enquire
+
+                .col-12.col-md-4
+                  .btn-blue.text-center.rounded.text-blue
+                    See Details
+        .carousel-item
+          .row.justify-content-center.flex-column-reverse.flex-md-row
+            .col-12.col-md-4
+              .product-image.p-2
+                =image_tag '/images/block1.jpg'
+            .col-12.col-md-8.pt-2.text-medium
+              %strong 50X30 Hollow Concrete
+              %p MWK 300
+              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+              Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,
+              tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+              Aenean velit odio, elementum in tempus ut, vehicula eu di
+
+              .row.justify-content-center.flex-column-reverse.flex-md-row.pt-5
+                .col-12.col-md-4
+                  .btn-gold.text-center.rounded.text-gold
+                    Enquire
+
+                .col-12.col-md-4
+                  .btn-blue.text-center.rounded.text-blue
+                    See Details
+
+    %a.carousel-control-prev.pb-5{"data-slide" => "prev", href: "#slider"}
+      .text-black
+        =icon('fas', 'chevron-left')
+    %a.carousel-control-next.pb-5{"data-slide" => "next", href: "#slider"}
+      .text-black  
+        =icon('fas', 'chevron-right')
+
+
+    
+    
+

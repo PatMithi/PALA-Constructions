@@ -21,6 +21,22 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'haml-rails', '~>2'
+gem 'pg'
+
+
+gem 'sassc'
+gem 'uglifier'
+gem 'coffee-rails'
+
+gem 'jquery-rails'
+gem 'bootstrap'
+gem 'font-awesome-sass'
+
+gem 'simple_form'
+gem 'draper'
+gem 'ransack'
+# select2-rails is vendored under vendor/assets
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -46,8 +62,14 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'capybara-select2', github: 'goodwill/capybara-select2'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
+  gem 'rspec-instafail', require: false
+  gem 'database_cleaner'
+  gem 'launchy'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end

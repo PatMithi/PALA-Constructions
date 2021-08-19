@@ -1,0 +1,78 @@
+@import 'variables';
+
+html,body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+
+  main {
+    flex: 1 1 auto;
+  }
+}
+
+mark {
+  background-color: $higlight-color;
+}
+
+#profile-nav {
+  border-bottom: none;
+
+  // Scrollable
+  overflow-y: hidden;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+
+  // Hide Scrollbar, should only affect mobile/tablet
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+#main-nav {
+  z-index: 2; 
+}
+
+#covid-guidance {
+  position: sticky; 
+  top: 0px; 
+  left: 0px; 
+  z-index: 1; 
+}
+
+.socials-container {
+  max-height: 525px;
+  max-width: 635px;
+  border: 2px solid $gold
+}
+
+.form-divider {
+  border-right: 1px solid;
+}
+
+.message-field {
+  width: 94%;
+  height: 150px;
+  margin-left: 5%;
+}
+
+.contact-field {
+  margin-left: 7%;
+}
+
+.details-field {
+  height: 60px;
+}
+
+.footer-left {
+  left: 10%;
+}

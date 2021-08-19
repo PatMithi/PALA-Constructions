@@ -1,0 +1,162 @@
+@import 'variables';
+
+// Backgrounds
+
+.bg-white {
+  background-color: $primary-background;
+}
+
+.bg-gray {
+  background-color: $secondary-background;
+}
+
+.bg-welcome {
+  background-color: $welcome-gray;
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+  left: 30%;
+  width: 40%;
+
+}
+
+.bg-darkgray {
+  background-color: $tertiary-background;
+}
+
+.bg-red {
+  background-color: $primary-color;
+}
+
+.bg-blue {
+  background-color: $secondary-color;
+}
+
+.home-nav {
+  z-index: 2;
+}
+
+.bg-darkblue {
+  background-color: $blue;
+  z-index: 2;
+}
+
+.border-gray {
+  border: 1px solid $gray;
+}
+
+.border-black {
+  border: 1px solid $primary-font;
+}
+
+.bordery-gray {
+  border: 1px solid $gray;
+  border-right: 0;
+  border-left: 0;
+}
+
+.border-bottom-gray {
+  border: 0 solid $gray;
+  border-bottom-width: 1px;
+}
+
+.border-right-gray {
+  border: 0 solid $gray;
+  border-right-width: 1px;
+}
+
+@media(min-width: 768px) {
+  .borderx-md-gray {
+    border: 1px solid $gray;
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+// Buttons
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: $gold !important;
+  border-color: $gold !important;
+}
+
+.btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary:visited {
+  border-color: $gold !important;
+  color: $gold !important;
+}
+
+.btn-outline-primary:hover {
+  background: $gold;
+  color: white !important;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+  background-color: $blue !important;
+  border-color: $blue !important;
+  box-shadow: 4px 4px;
+}
+
+.btn-outline-secondary, .btn-outline-secondary:hover, .btn-outline-secondary:active, .btn-outline-secondary:visited {
+  border-color: $blue !important;
+  color: $blue !important;
+}
+
+.btn-gold, .border-gold{
+  border: solid 1px $gold;
+  max-width: 150px;
+}
+
+.btn-blue, .border-blue{
+  border: solid 1px $blue;
+  max-width: 150px;
+}
+
+.small-border {
+  border: solid 1px $gold;
+  max-width: 100px;
+}
+
+.border-top {
+  border-top: solid 1px $gold;
+  border-left: solid 1px $gold;
+}
+
+.listing-blue{
+  border: solid 2px $secondary-color;
+}
+
+.listing-blue, .listing-red {
+  transition: 0.2s ease-in-out;
+}
+
+.listing-blue:hover, .listing-red:hover {
+  transform: scale(1.02);
+}
+
+.btn-approve {
+  background-color: $green;
+}
+
+.heart-link {
+  color: $primary-color;
+
+  i {
+    transition: 0.5s ease-in-out;
+  }
+
+  &:hover {
+    color: $primary-color;
+    text-decoration: none;
+
+    i {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    i {
+      transition: 0.1s linear;
+      transform: scale(0.75);
+    }
+  }
+}
