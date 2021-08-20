@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get :index, to: 'pages#index'
   get :contact, to: 'pages#contact'
   get :about, to: 'pages#about'
-  get :products, to: 'pages#products'
+  get :view_products, to: 'pages#view_products'
+  get :products_gallery, to: 'pages#products_gallery'
   
   #Home Page
   root to: "pages#index"

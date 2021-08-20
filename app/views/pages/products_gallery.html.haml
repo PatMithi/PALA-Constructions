@@ -1,0 +1,10 @@
+.row.justify-content-center.flex-column-reverse.flex-md-row 
+  .col-12.col-md-12
+    .text-large.text-center.text-gold.p-3
+      %strong Products
+
+.row.justify-content-center.flex-column-reverse.flex-md-row 
+  .col-12.col-md-10
+    .row.justify-content-center.flex-column-reverse.flex-md-row
+      - 22.times do
+        = render 'small_product'

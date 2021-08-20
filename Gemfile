@@ -36,6 +36,10 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'draper'
 gem 'ransack'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
+gem 'devise'
 # select2-rails is vendored under vendor/assets
 
 # Use Active Storage variant

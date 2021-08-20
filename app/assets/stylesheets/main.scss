@@ -18,35 +18,9 @@ body {
   }
 }
 
-mark {
-  background-color: $higlight-color;
-}
 
-#profile-nav {
-  border-bottom: none;
-
-  // Scrollable
-  overflow-y: hidden;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-
-  // Hide Scrollbar, should only affect mobile/tablet
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
 #main-nav {
   z-index: 2; 
-}
-
-#covid-guidance {
-  position: sticky; 
-  top: 0px; 
-  left: 0px; 
-  z-index: 1; 
 }
 
 .socials-container {
@@ -75,4 +49,16 @@ mark {
 
 .footer-left {
   left: 10%;
+}
+
+.product-card {
+  border: solid #7a7a7a 1px;
+  width:370px;
+  height: 22%;
+  box-shadow: 5px;
+}
+
+
+.ml-5 {
+  margin-left: 10%;
 }

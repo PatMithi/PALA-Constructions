@@ -19,13 +19,6 @@
   }
 }
 
-.login-logo {
-  img {
-    max-height: 175px;
-    object-fit: scale-down;
-  }
-}
-
 .product-image {
   img {
     height: 400px;
@@ -33,96 +26,10 @@
   }
   
 }
-
-// Listing image input
-
-.file-input {
-  .input {
-    display: none;
-  }
-
-  border: 1px solid #ccc;
-  display: inline-block;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-@media(max-width: 992px) {
-  .icon-button {
-    i {
-      font-size: 25px;
-    }
-  }
-}
-
-.icon-button {
-  i {
-    font-size: 20px;
-  }
-}
-
-#images-preview {
-  .preview {
-    max-width: 25%;
-    margin: 15px 0;
-
-    align-self: center;
-
-    .delete-btn {
-      cursor: pointer;
-      position: absolute;
-      top: -8px;
-      right: 0;
-      width: 25px;
-      height: 25px;
-      background-color: white;
-      border: 2px solid $primary-color;
-      color: $primary-color;
-      border-radius: 50%;
-
-      line-height: 23px;
-      font-size: 15px;
-      text-align: center;
-      &::after {
-        content: "✖"
-      }
-    }
-
-    .image-container {
-      width: 100%;
-      border: 1px solid $gray;
-      border-radius: 2%;
-      padding: 2%;
-
-      &::before {
-        content: '';
-        float: left;
-        padding-top: 100%;
-      }
-
-      &::after {
-        content: '';
-        display: block;
-        clear: both;
-      }
-
-      img {
-        max-width: 100%;
-        object-fit: contain;
-      }
-
-      .placeholder {
-        display:inline-block;
-        font-size: 8vw;
-        line-height: 200%;
-        color: $gray;
-        width: 100%;
-        height: width;
-        text-align: center;
-        vertical-align: bottom;
-      }
-    }
-
+.product-image-small {
+  img {
+    width: 370px;
+    object-fit: scale-down;
   }
 }
 
