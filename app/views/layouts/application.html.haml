@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %title #{content_for(:title)} - PALA Construction
+    %link{ rel: "preconnect", href: "https://fonts.gstatic.com"}
+    %link{ href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap", rel: "stylesheet"}
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+    %meta{ :'http-equiv' => 'X-UA-Compatible', content: 'IE=edge' }
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+
+    = stylesheet_link_tag    "application", media: :all
+    = action_cable_meta_tag
+    = favicon_link_tag '/favicon.ico'
+    = csrf_meta_tags
+
+  %body
+    = render 'shared/navbar'
+
+    %main.bg-gray.row.py-0.py-md-0.align-items-center
+      #main-container.container
+        .bg-white.rounded.p-0.p-md-0
+          = yield
+    
+    - if not current_page?(root_path)
+      = render 'shared/footer'

@@ -12,4 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap_setup
+ *= require font_awesome_setup
+
+ *= require colours
+ *= require typography
+ *= require main
+ *= require warning_page
+ *= require images
  */

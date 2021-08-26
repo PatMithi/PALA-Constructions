@@ -1,0 +1,65 @@
+@import 'variables';
+
+html,body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  overflow-x: hidden;
+
+  main {
+    flex: 1 1 auto;
+  }
+}
+
+
+#main-nav {
+  z-index: 2; 
+}
+
+.socials-container {
+  max-height: 525px;
+  max-width: 635px;
+  border: 2px solid $gold
+}
+
+.form-divider {
+  border-right: 1px solid;
+}
+
+.message-field {
+  width: 94%;
+  height: 150px;
+  margin-left: 5%;
+}
+
+.contact-field {
+  margin-left: 7%;
+}
+
+.details-field {
+  height: 60px;
+}
+
+.footer-left {
+  left: 10%;
+}
+
+.product-card {
+  border: solid #7a7a7a 1px;
+  width:370px;
+  height: 22%;
+  box-shadow: 5px;
+}
+
+
+.ml-5 {
+  margin-left: 10%;
+}
