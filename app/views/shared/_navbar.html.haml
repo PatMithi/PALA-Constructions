@@ -1,68 +1,53 @@
 - if current_page?(root_path)
   .navbar.navbar-dark.navbar-expand-lg.position-sticky.home-nav
-    = link_to :root, class: 'hidden-sm d-flex align-items-center text-decoration-none' do
-      .logo-image-container.text-gold.pt-3
-        = image_tag '/images/logos/PALA Transp.png'
-    %button.navbar-toggler{ aria: { controls: "navbar-content", expanded: false, label: "Toggle navigation" }, data: { target: "#navbar-content", toggle: "collapse" }, type: "button" }
+
+    %a.navbar-brand
+      = link_to :root, class: 'hidden-sm d-flex align-items-center text-decoration-none' do
+        .logo-image-container.text-gold.pt-3
+          = image_tag '/images/logos/PALA Transp.png'
+    %button.navbar-toggler.m-4{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button", "data-turbolinks-permanent" => ""}
       %span.navbar-toggler-icon
 
-    .collapse.navbar-collapse#navbar-content
-      %ul.nav.navbar-nav.pl-0.pl-lg-4.text-gold
-        
+    #navbarNav.collapse.navbar-collapse
+      %ul.navbar-nav.pl-0.pl-lg-4.text-gold    
+        %li.nav-item.text-gold
+          =link_to about_path, class: 'nav-link ', role: 'button' do
+            =icon 'fas text-small', 'info-circle'
+            About
           
-
-    %ul.nav.navbar-nav.ml-auto
-      %li.nav-item.dropdown.text-gold
-        =link_to about_path, aria: { haspopup: true, expanded: false }, data: { toggle: :dropdown }, id: 'navbar-user-link', class: 'nav-link ', role: 'button' do
-          =icon 'fas text-small', 'info-circle'
-          About
-        %b.caret
-    %ul.nav.navbar-nav.ml-auto
-      %li.nav-item.dropdown.text-gold
-        =link_to products_gallery_path, aria: { haspopup: true, expanded: false }, data: { toggle: :dropdown }, id: 'navbar-user-link', class: 'nav-link ', role: 'button' do
-          =icon 'fas text-small', 'shopping-cart'
-          Products
-    %ul.nav.navbar-nav.ml-auto
-      %li.nav-item.dropdown.text-gold
-        = link_to contact_path, aria: { haspopup: true, expanded: false }, data: { toggle: :dropdown }, id: 'navbar-user-link', class: 'nav-link dropdown-toggle text-hover-gray', role: 'button' do
-          =icon 'fas text-small', 'envelope'
-          Contact Us
-        %b.caret
-      .dropdown-menu.dropdown-menu-right
-        =link_to products_path, class: 'dropdown-item', title: "Go to Products" do
-          =icon 'fas text-small', 'shopping-cart'
-          Products
+        %li.nav-item.text-gold
+          =link_to products_gallery_path, class: 'nav-link ', role: 'button' do
+            =icon 'fas text-small', 'shopping-cart'
+            Products
+        %li.nav-item.text-gold
+          = link_to contact_path, class: 'nav-link', role: 'button' do
+            =icon 'fas text-small', 'envelope'
+            Contact Us  
+        
 
 -else
   .navbar.navbar-dark.navbar-expand-lg.position-sticky.bg-darkblue
-    = link_to :root, class: 'hidden-sm d-flex align-items-center text-decoration-none' do
-      .logo-image-container.text-gold
-        = image_tag '/images/logos/PALA Transp.png'
-    %button.navbar-toggler{ aria: { controls: "navbar-content", expanded: false, label: "Toggle navigation" }, data: { target: "#navbar-content", toggle: "collapse" }, type: "button" }
+    %a.navbar-brand
+      = link_to :root, class: 'hidden-sm d-flex align-items-center text-decoration-none' do
+        .logo-image-container.text-gold
+          = image_tag '/images/logos/PALA Transp.png'
+    %button.navbar-toggler.m-4{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarNav", "data-bs-toggle" => "collapse", :type => "button", "data-turbolinks-permanent" => ""}
       %span.navbar-toggler-icon
 
-    .collapse.navbar-collapse#navbar-content
-      %ul.nav.navbar-nav.pl-0.pl-lg-4.text-gold
-        
+    #navbarNav.collapse.navbar-collapse
+      %ul.navbar-nav.pl-0.pl-lg-4.text-gold    
+        %li.nav-item.text-gold
+          =link_to about_path, class: 'nav-link ', role: 'button' do
+            =icon 'fas text-small', 'info-circle'
+            About
           
-
-    %ul.nav.navbar-nav.ml-auto
-      %li.nav-item.dropdown.text-gold
-        =link_to about_path, aria: { haspopup: true, expanded: false }, data: { toggle: :dropdown }, id: 'navbar-user-link', class: 'nav-link', role: 'button' do
-          =icon 'fas text-small', 'info-circle'
-          About
-        %b.caret
-
-    %ul.nav.navbar-nav.ml-auto
-      %li.nav-item.dropdown.text-gold
-        =link_to products_gallery_path, aria: { haspopup: true, expanded: false }, data: { toggle: :dropdown }, id: 'navbar-user-link', class: 'nav-link ', role: 'button' do
-          =icon 'fas text-small', 'shopping-cart'
-          Products
-    %ul.nav.navbar-nav.ml-auto
-      %li.nav-item.dropdown.text-gold
-        =link_to contact_path, aria: { haspopup: true, expanded: false }, data: { toggle: :dropdown }, id: 'navbar-user-link', class: 'nav-link ', role: 'button' do
-          =icon 'fas text-small', 'envelope'
-          Contact Us
-        %b.caret
+        %li.nav-item.text-gold
+          =link_to products_gallery_path, class: 'nav-link ', role: 'button' do
+            =icon 'fas text-small', 'shopping-cart'
+            Products
+        %li.nav-item.text-gold
+          = link_to contact_path, class: 'nav-link', role: 'button' do
+            =icon 'fas text-small', 'envelope'
+            Contact Us  
           
           
