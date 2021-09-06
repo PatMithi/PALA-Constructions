@@ -1,14 +1,4 @@
-%p#notice= notice
-
-%p
-  %b Description:
-  = @product.description
-%p
-  %b Specification:
-  = @product.specification
-%p
-  %b Price vat inclusive:
-  = @product.price_VAT_Inclusive
+= render "view"
 
 = link_to 'Edit', edit_product_path(@product)
 \|

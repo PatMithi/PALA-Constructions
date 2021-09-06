@@ -26,7 +26,7 @@
 }
 
 .bg-red {
-  background-color: $primary-color;
+  background-color: $red;
 }
 
 .bg-blue {
@@ -104,12 +104,18 @@
 
 .btn-gold, .border-gold{
   border: solid 1px $gold;
+}
+
+.btn-red {
+  border: solid 1px $red;
+}
+
+.btn-blue, .border-blue, .btn-red, .btn-gold, .border-gold {
   max-width: 150px;
 }
 
 .btn-blue, .border-blue{
   border: solid 1px $blue;
-  max-width: 150px;
 }
 
 .small-border {

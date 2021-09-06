@@ -1,25 +1,68 @@
-%h1 Listing products
+- if current_page?(products_path)
 
-%table
-  %thead
-    %tr
-      %th Description
-      %th Specification
-      %th Price vat inclusive
-      %th
-      %th
-      %th
+  %h1{:class=> "text-gold text-center"} Products
 
-  %tbody
-    - @products.each do |product|
+  %table.w-100.p-2
+    %thead
       %tr
-        %td= product.description
-        %td= product.specification
-        %td= product.price_VAT_Inclusive
-        %td= link_to 'Show', product
-        %td= link_to 'Edit', edit_product_path(product)
-        %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+        %th.p-2
+          Description
+        %th.p-2
+          Specification
+        %th.p-2
+          Price vat inclusive
+        %th
+        %th
+        %th
 
-%br
+    %tbody
+      - @products.each do |product|
+        %tr
+          %td= product.description
+          %td= product.specification
+          %td
+            = product.price_VAT_Inclusive
+          %td.btn-blue.p-2.text-center
+            = link_to 'Show', product, class: "text-decoration-none text-blue"
+          %td.btn-blue.rounded.p-2.text-center
+            = link_to 'Edit', edit_product_path(product), class: "text-decoration-none text-blue"
+            =icon 'fas text-small text-red', 'pencil-square'
+          %td.btn-red.rounded.text-center.p-2
+            = link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-decoration-none text-red"
+            =icon 'fas text-small text-red', 'trash'
 
-= link_to 'New Product', new_product_path
+  %br
+
+  .btn-gold.rounded.text-center
+    = link_to 'New Product', new_product_path, class: "text-decoration-none text-gold"
+
+- else
+  .row.justify-content-center.flex-column-reverse.flex-md-row 
+    .col-12.col-md-12
+      .text-large.text-center.text-gold.p-3
+        %strong Products
+  .row.justify-content-center.flex-column-reverse.flex-md-row 
+    .col-12.col-md-10
+      .row.justify-content-center.flex-column-reverse.flex-md-row
+        - @products.each do |product|
+          .col-12.col-sm-3.pt-3.p-3
+            .product-image-small
+              - if product.avatar.attached?
+                = image_tag(rails_blob_url(product.avatar))
+            .product-card.text-center.text-small.p-2.rounded
+              %p 
+                = product.description
+              %p 
+                MWK
+                = product.price_VAT_Inclusive
+              %p 
+                Specification:
+                = product.specification
+              .row.justify-content-center.flex-column-reverse.flex-md-row
+                .col-12.col-sm-6
+                  .btn-gold.text-center.rounded.text-gold.p-2
+                    = link_to 'Show', product, class: "text-decoration-none text-gold"
+                .col-12.col-sm-6
+                  .btn-blue.text-center.rounded.text-blue.p-2
+                    = link_to "https://api.whatsapp.com/send?phone=265994962381&text=Hello,%20I%20would%20like%20to%20enquire%20about%20one%20of%20your%20blocks%20advertised%20on%20your%20website.", class: "text-decoration-none text-blue" do
+                      Enquire

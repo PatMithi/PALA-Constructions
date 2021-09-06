@@ -14,8 +14,6 @@ class PagesController < ApplicationController
     end
     def about
     end
-    def products_gallery
-    end
     # POST pages/contact
     def contact_mail
         contact = params[:contact]

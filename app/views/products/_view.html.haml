@@ -1,0 +1,27 @@
+.row.justify-content-center.flex-column-reverse.flex-md-row.p-5  
+  .col-12.col-md-8.small-border     
+    .row.justify-content-center.flex-column-reverse.flex-md-row
+      .col-12.col-md-4
+        .product-image.p-2
+          - if @product.avatar&.attached?
+            = image_tag(rails_blob_url(@product.avatar))
+      .col-12.col-md-8.pt-2.text-medium
+        %strong 
+          = @product.description
+        %p 
+          MWK 
+          = @product.price_VAT_Inclusive
+        %p 
+          Specificaion:
+          = @product.specification
+        %p Delivery: MWK 2000 per Kilometer 
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.
+        Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique,
+        tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna.
+        
+
+        .row.justify-content-center.flex-column-reverse.flex-md-row.pt-5
+          .col-12.col-md-4
+            .btn-gold.text-center.rounded.text-gold.p-2
+              = link_to "https://api.whatsapp.com/send?phone=265994962381&text=Hello,%20I%20would%20like%20to%20enquire%20about%20one%20of%20your%20blocks%20advertised%20on%20your%20website.", class: "text-decoration-none text-gold" do
+                Enquire

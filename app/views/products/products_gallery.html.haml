@@ -6,5 +6,5 @@
 .row.justify-content-center.flex-column-reverse.flex-md-row 
   .col-12.col-md-10
     .row.justify-content-center.flex-column-reverse.flex-md-row
-      - 22.times do
-        = render 'small_product'
+      - @products.each do |product|
+        = render "small_product"
