@@ -17,12 +17,32 @@
     object-fit: scale-down;
     z-index: 2;
   }
+  @media screen and (max-width: 450px) {
+    img {
+     height: 3.75rem;
+     object-fit: scale-down;
+     z-index: 2;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-image {
+    img {
+      height: 3rem;
+    }
+  }
 }
 
 .product-image {
   img {
-    height: 400px;
+    height: 350px;
     object-fit: scale-down;
+  }
+  @media screen and (min-width: 450px)  and (max-width: 950px) {
+    img {
+      margin-right: 5%;
+    }
   }
   
 }
@@ -30,6 +50,27 @@
   img {
     width: 370px;
     object-fit: scale-down;
+  }
+
+  @media screen and (max-width: 450px){
+    img {
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .product-image {
+    img {
+      margin-left: 0%;
+      width: 100%;
+    }
   }
 }
 
@@ -47,36 +88,6 @@
 .mini-image {
   height: 10vh;
   cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  #preview {
-    display: none;
-  }
-}
-
-.navbar-brand {
-  img {
-    height: 2rem;
-    width: 2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .navbar-brand {
-    margin-right: 0.5rem;
-    img {
-      height: 1.5rem;
-      width: 1.5rem;
-    }
-  }
-}
-
-.image-404 {
-  img {
-    width: 25%;
-    height: auto;
-  }
 }
 
 // Image carousel colour
@@ -138,5 +149,9 @@
   img {
     width: 40px;
     height: 40px;
+  }
+
+  @media screen and (max-width: 450px) {
+    margin: 2%;
   }
 }

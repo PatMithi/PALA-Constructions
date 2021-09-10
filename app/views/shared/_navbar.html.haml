@@ -19,6 +19,20 @@
           =link_to contact_path, class: 'nav-link nav-item bg-darkblue p-2' do
             =icon 'fas text-small', 'envelope'
             Contact
+        - if user_signed_in? && current_user.manager?
+          %li.nav-item.pl-0.pl-lg-4.text-medium
+            =link_to products_path, class: 'nav-link nav-item bg-darkblue p-2' do
+              = icon 'fas', 'user-circle'
+              Admin
+
+        - if user_signed_in?
+          %li.nav-item.pl-0.pl-lg-4.text-medium
+            = link_to destroy_user_session_path, class: 'nav-link nav-item bg-darkblue p-2', method: :delete, title: "Log out of the system" do
+              = icon 'fas', 'sign-out-alt', 'Log out'
+        -else 
+          %li.nav-item.pl-0.pl-lg-4.text-medium
+            = link_to new_user_session_path, class: 'nav-link nav-item bg-darkblue p-2', method: :create, title: "Log in to the system" do
+              = icon 'fas', 'sign-in-alt', 'Log In'
         
   
 
@@ -30,7 +44,7 @@
     %button.navbar-toggler{ aria: { controls: "navbar-content", expanded: false, label: "Toggle navigation" }, data: { target: "#navbar-content", toggle: "collapse" }, type: "button" }
       %span.navbar-toggler-icon
 
-    .collapse.navbar-collapse#navbar-content.text-right
+    .collapse.navbar-collapse#navbar-content
       %ul.navbar-nav.pl-0.pl-lg-4.text-medium
         = link_to about_path, class: 'nav-link nav-item p-2' do
           =icon 'fas text-small', 'info-circle'
@@ -43,5 +57,20 @@
           =link_to contact_path, class: 'nav-link nav-item bg-darkblue p-2' do
             =icon 'fas text-small', 'envelope'
             Contact
+        - if user_signed_in? && current_user.manager?
+          %li.nav-item.pl-0.pl-lg-4.text-medium
+            =link_to products_path, class: 'nav-link nav-item bg-darkblue p-2' do
+              = icon 'fas', 'user-circle'
+              Admin
+
+        - if user_signed_in?
+          %li.nav-item.pl-0.pl-lg-4.text-medium
+            = link_to destroy_user_session_path, class: 'nav-link nav-item bg-darkblue p-2', method: :delete, title: "Log out of the system" do
+              = icon 'fas', 'sign-out-alt', 'Log out'
+        -else 
+          %li.nav-item.pl-0.pl-lg-4.text-medium
+            = link_to new_user_session_path, class: 'nav-link nav-item bg-darkblue p-2', method: :create, title: "Log in to the system" do
+              = icon 'fas', 'sign-in-alt', 'Log In'
+
 
           

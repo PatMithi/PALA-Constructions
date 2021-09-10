@@ -1,0 +1,17 @@
+- content_for :title, 'Log In'
+
+.row.justify-content-center.flex-column-reverse.flex-lg-row
+  .col-12.col-lg-4.pb-4.pb-lg-0
+    .card.card-light.h-100
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "d-flex flex-column h-100"}) do |f|
+        .card-header.text-center.text-medium.text-gold
+          %strong Log In
+        .card-body.p-3.text-center
+          .p-2
+            = f.text_field :email, autofocus: true, required: true, placeholder: "Email"
+          .p-2
+            = f.password_field :password, required: true, placeholder: "Password"
+        .card-footer.text-center
+          = submit_tag 'Log in', feedback_text: 'Logging in...', class: "text-decoration-none text-gold btn-gold"
+          .mt-3.text-center= render "devise/shared/links"
+

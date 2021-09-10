@@ -21,6 +21,13 @@
 
 }
 
+@media screen and (max-width: 1000px) {
+  .bg-welcome {
+    width: 80%;
+    left: 10%;
+  }
+}
+
 .bg-darkgray {
   background-color: $tertiary-background;
 }
@@ -102,17 +109,52 @@
   color: $blue !important;
 }
 
-.btn-gold, .border-gold{
+.btn-gold, .border-gold, .submit-gold{
   border: solid 1px $gold;
+
+}
+
+.submit-gold {
+  max-width: 150px;
+  margin-left: 30%;
+  @media screen and (min-width: 900px) {
+    margin-left: 40%;
+  }
 }
 
 .btn-red {
   border: solid 1px $red;
 }
 
-.btn-blue, .border-blue, .btn-red, .btn-gold, .border-gold {
+.border-gold {
   max-width: 150px;
 }
+
+.btn-blue, .btn-gold, .submit-gold {
+  width: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .btn-blue, .btn-gold, .border-gold {
+    max-width: 80%;
+    margin: 2%;
+    margin-left: 10%;
+  }
+  .submit-gold {
+    width: 60%;
+    margin-left: 30%;
+  }
+  .form-black {
+    border-top: solid 1px $blue;
+  }
+  .small-border {
+    width: 100%;
+  }
+
+}
+
+
+
 
 .btn-blue, .border-blue{
   border: solid 1px $blue;
@@ -120,7 +162,22 @@
 
 .small-border {
   border: solid 1px $gold;
-  max-width: 100px;
+  width: 90%;
+  margin-left: 5%;
+  position: relative;
+}
+
+@media screen and (min-width: 450px)  and (max-width: 950px) {
+  .border-gold {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .small-border {
+    width: 60%;
+    margin-left: 20%;
+  }  
 }
 
 .border-top {

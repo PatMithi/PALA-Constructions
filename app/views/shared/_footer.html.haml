@@ -1,6 +1,6 @@
 %footer#footer.bg-darkblue.text-gold.px-4
   .row.pt-4.m-0
-    .col-12.col-md-4.py-3.py-md-0.text-medium.logo-image-container.text-left.text-white.text-center
+    .col-12.col-md-4.py-3.py-md-0.text-medium.logo-image-container.text-white.text-center.footer-image
       = image_tag '/images/logos/PALA Transp.png'
       %p{:class => 'text-white text-small footer-left'} The official webiste of PALA Construction
       = icon 'fas text-white p-2 pt-0 pb-2', 'copyright'
@@ -14,7 +14,7 @@
         = link_to contact_path, title: "Go to Contact Page", class: "text-decoration-none text-white" do
           %p Contact
         
-        = link_to admin_products_path, title: "Go to Products Page", class: "text-decoration-none text-white" do
+        = link_to products_gallery_path, title: "Go to Products Page", class: "text-decoration-none text-white" do
           %p FAQs
 
     .col-12.col-md-4.py-3.py-md-0.text-center

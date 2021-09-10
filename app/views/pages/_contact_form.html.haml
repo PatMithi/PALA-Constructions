@@ -2,19 +2,20 @@
   = f.error_notification
 
   .form-black
-    .row.justify-content-center.flex-column-reverse.flex-md-row.p-5
+    .row.justify-content-center.flex-column.flex-md-row.p-5
       .col-12.col-md-6
         .form-group.contact-field
           = f.text_field :name, placeholder: "Name", class: "w-100 details-field p-2"
       .col-12.col-md-6
         .form-group.contact-field
           = f.text_field :email, placeholder: "Email", class: "w-100 details-field p-2"
-    .row.justify-content-center.flex-column-reverse.flex-md-row
+    .row.justify-content-center.flex-column.flex-md-row
       .col-12.col-md-12.w-100.p-5.pt-2
         .form-group
           = f.text_field :message, placeholder: "Message", class: "message-field"
     
-  .form-actions.text-center.pt-2
-    = f.button :button, class: 'btn-gold bg-white text-gold rounded p-3' do
+  
+  .form-actions.text-center.submit-gold.rounded
+    = f.button :button, class: 'text-gold p-3' do
       Submit
       

@@ -38,6 +38,7 @@ gem 'draper'
 gem 'ransack'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'cancancan'
 
 gem 'devise'
 # select2-rails is vendored under vendor/assets
